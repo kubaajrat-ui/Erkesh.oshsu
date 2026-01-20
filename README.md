@@ -1,2 +1,363 @@
-# index.oshsu
-this is the site
+<!DOCTYPE html>
+<html lang="ky">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Эркештам Логистика Борбору - Кезек, Жүк ташуу, Акыркы маалымат</title>
+    <meta name="description"
+        content="Эркештам өткөөлүндөгү онлайн кезек, жүк ташуунун учурдагы абалы, документтер, тарифтер">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <a> href="https://kg.camera/ky/camera/Panorama"</a>
+    <style>
+        :root {
+            --primary: #0d6efd;
+            --dark: #212529;
+            --success: #198754;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f8f9fa;
+        }
+
+        .navbar {
+            background: var(--dark);
+        }
+
+        .hero {     
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1555529669-e69e7ff38598?ixlib=rb-4.0.3&auto=format&fit=crop&q=80');
+            background-size: cover;
+            color: white;
+            padding: 120px 0;
+        }
+
+        .status-card {
+            font-size: 1.5rem;
+            text-align: center;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .queue-number {
+            font-size: 4rem;
+            font-weight: bold;
+        }
+
+        .lang-switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 9999;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Тил тандоо -->
+    <div class="lang-switch">
+        <div class="btn-group">
+            <a href="?lang=ky" class="btn btn-outline-light active">КЫР</a>
+            <a href="?lang=ru" class="btn btn-outline-light">РУС</a>
+            <a href="?lang=en" class="btn btn-outline-light">ENG</a>
+            <a href="?lang=zh" class="btn btn-outline-light">中文</a>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#"><i class="fas fa-truck me-2"></i> Эркештам Логистика</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#live">LIVE Абалы</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#queue">Кезекке катталуу</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tariff">Тарифтер</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#docs">Документтер</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#partners">Партнерлор</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Байланыш</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">ЭРКЕШТАМ – КЫТАЙ ЖҮК ТАШУУ</h1>
+            <p class="lead">Онлайн кезек, учурдагы абал, бардык маалымат бир жерде</p>
+            <a href="#queue" class="btn btn-success btn-lg mt-3"><i class="fas fa-plus-circle"></i> Кезекке катталуу</a>
+        </div>
+    </section>
+
+    <!-- LIVE Абалы -->
+    <section id="live" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="text-center mb-5"><i class="fas fa-satellite-dish text-primary"></i> УЧУРДАГЫ АБАЛ (LIVE)</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="status-card bg-danger text-white">
+                        <div class="queue-number" id="trucksCount">1 247</div>
+                        <p class="mb-0">Чек арада турган машиналар</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="status-card bg-warning text-dark">
+                        <div class="queue-number">6-8</div>
+                        <p class="mb-0">Орточо күтүү (күн)</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="status-card bg-info text-white">
+                        <div class="queue-number">-7°C</div>
+                        <p class="mb-0">Аба ырайы (Эркештам)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <p><strong>Акыркы жаңыртуу:</strong> 2026-жыл, 16-январь, 17:10</p>
+                <button class="btn btn-outline-primary" onclick="location.reload()">
+                    <i class="fas fa-sync-alt"></i> Жаңыртуу
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Кезекке катталуу -->
+    <section id="queue" class="py-5" style="background: #f1f3f5;">
+        <div class="container">
+            <h2 class="text-center mb-5">ОНЛАЙН КЕЗЕККЕ КАТТАЛУУ</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow">
+                        <div class="card-body p-5">
+                            <form id="queueForm">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Машина номери <span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control form-control-lg"
+                                            placeholder="01KG 123 ABC" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Жүктүн түрү</label>
+                                        <select class="form-select form-select-lg">
+                                            <option>Кийим-кече</option>
+                                            <option>Электроника</option>
+                                            <option>Курулуш материалдары</option>
+                                            <option>Азык-түлүк</option>
+                                            <option>Башка</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Тоннаж (тонна)</label>
+                                        <input type="number" class="form-control form-control-lg" placeholder="20">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Кытайдагы алуучу компания</label>
+                                        <input type="text" class="form-control form-control-lg"
+                                            placeholder="Xinjiang ABC Trade Co.">
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Телефон (WhatsApp) <span
+                                            class="text-danger">*</span></label>
+                                    <input type="tel" class="form-control form-control-lg"
+                                        placeholder="+996 999 123 456" required>
+                                </div>
+                                <div class="form-check mb-4">
+                                    <input class="form-check-input" type="checkbox" required>
+                                    <label class="form-check-label">Мен <a href="#">эрежелерди</a> кабыл алам</label>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-success btn-lg px-5">
+                                        <i class="fas fa-paper-plane"></i> Кезекке катталуу
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Тарифтер, Документтер, Партнерлор (кыскача) -->
+    <section id="tariff" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="text-center mb-5">ТАРИФТЕР ЖАНА КАЛЬКУЛЯТОР</h2>
+            <p class="text-center lead">Жүктүн түрүн жана салмагын киргизип, болжолдуу чыгымды дароо билиңиз → <a
+                    href="#" class="btn btn-primary">Калькулятор</a></p>
+        </div>
+    </section>
+
+    <section id="docs" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">КЕРЕКТҮҮ ДОКУМЕНТТЕР</h2>
+            <div class="row text-center">
+                <div class="col-md-3"><a href="#" class="btn btn-outline-primary btn-lg d-block">CMR үлгүсү</a></div>
+                <div class="col-md-3"><a href="#" class="btn btn-outline-primary btn-lg d-block">Инвойс</a></div>
+                <div class="col-md-3"><a href="#" class="btn btn-outline-primary btn-lg d-block">Packing List</a></div>
+                <div class="col-md-3"><a href="#" class="btn btn-outline-primary btn-lg d-block">Бардык тизме (PDF)</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="partners" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">ИШЕНИМДҮҮ ПАРТНЕРЛОР</h2>
+            <div class="row">
+                <div class="col-md-4 text-center mb-4">
+                    <h5>ОсОО "Альянс Логистик"</h5>
+                    <p>☎ +996 555 777 888<br>⭐ 4.9 (342 отзыв)</p>
+                </div>
+                <div class="col-md-4 text-center mb-4">
+                    <h5>Таможенный брокер "Кыргыз-Кытай"</h5>
+                    <p>☎ +996 700 123 456<br>⭐ 4.8 (289 отзыв)</p>
+                </div>
+                <div class="col-md-4 text-center mb-4">
+                    <h5>Склад Эркештам</h5>
+                    <p>☎ +996 999 555 111<br>⭐ 4.7 (198 отзыв)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Эркештам Логистика Борбору</h5>
+                    <p>Байланыш: +996 999 000 999 (WhatsApp, Telegram)<br>
+                        Email: info@erkeshtam.kg</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>© 2025 Бардык укуктар корголгон.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Жөн гана форма жөнөтүлгөндө билдирүү чыгаруу (тест үчүн)
+        document.getElementById('queueForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Сиз ийгиликтүү кезекке катталдыңыз!\nКезек номериңиз: #1247\nБолжолдуу күтүү: 6-8 күн');
+        });
+    </script>
+    <script>
+        // Бардык котормолор (4 тил)
+        const t = {
+            ky: {
+                brand: "Эркештам Логистика", live: "LIVE Абалы", queue: "Кезекке катталуу", tariff: "Тарифтер", docs: "Документтер", partners: "Партнерлор", contact: "Байланыш",
+                hero_h1: "ЭРКЕШТАМ – КЫТАЙ ЖҮК ТАШУУ", hero_p: "Онлайн кезек, учурдагы абал, бардык маалымат бир жерде", hero_btn: "Кезекке катталуу",
+                live_h2: "УЧУРДАГЫ АБАЛ (LIVE)", trucks: "Чек арада турган машиналар", waiting: "Орточо күтүү (күн)", weather: "Аба ырайы (Эркештам)",
+                queue_h2: "ОНЛАЙН КЕЗЕККЕ КАТТАЛУУ", plate: "Машина номери", cargo: "Жүктүн түрү", tonnage: "Тоннаж (тонна)", receiver: "Кытайдагы алуучу компания", phone: "Телефон (WhatsApp)", rules: "Мен эрежелерди кабыл алам", submit: "Кезекке катталуу",
+                tariff_h2: "ТАРИФТЕР ЖАНА КАЛЬКУЛЯТОР", docs_h2: "КЕРЕКТҮҮ ДОКУМЕНТТЕР", partners_h2: "ИШЕНИМДҮҮ ПАРТНЕРЛОР",
+                footer_h5: "Эркештам Логистика Борбору", footer_p: "Байланыш: +996 999 000 999 (WhatsApp, Telegram)<br>Email: info@erkeshtam.kg",
+                alert: "Сиз ийгиликтүү кезекке катталдыңыз!\nКезек номериңиз: #1247\nБолжолдуу күтүү: 6-8 күн"
+            },
+            ru: {
+                brand: "Эркештам Логистика", live: "LIVE Статус", queue: "Запись в очередь", tariff: "Тарифы", docs: "Документы", partners: "Партнёры", contact: "Контакты",
+                hero_h1: "ЭРКЕШТАМ – ГРУЗОПЕРЕВОЗКИ В КИТАЙ", hero_p: "Онлайн-очередь, текущая ситуация, вся информация в одном месте", hero_btn: "Записаться в очередь",
+                live_h2: "ТЕКУЩАЯ СИТУАЦИЯ (LIVE)", trucks: "Машин на границе", waiting: "Среднее ожидание (дней)", weather: "Погода (Эркештам)",
+                queue_h2: "ОНЛАЙН-ЗАПИСЬ В ОЧЕРЕДЬ", plate: "Номер машины", cargo: "Тип груза", tonnage: "Тоннаж (тонн)", receiver: "Получатель в Китае", phone: "Телефон (WhatsApp)", rules: "Я принимаю правила", submit: "Записаться",
+                tariff_h2: "ТАРИФЫ И КАЛЬКУЛЯТОР", docs_h2: "НЕОБХОДИМЫЕ ДОКУМЕНТЫ", partners_h2: "НАДЁЖНЫЕ ПАРТНЁРЫ",
+                footer_h5: "Эркештам Логистический Центр", footer_p: "Контакты: +996 999 000 999 (WhatsApp, Telegram)<br>Email: info@erkeshtam.kg",
+                alert: "Вы успешно записаны в очередь!\nВаш номер: #1247\nОриентировочное ожидание: 6-8 дней"
+            },
+            en: {
+                brand: "Erkeshtam Logistics", live: "LIVE Status", queue: "Join Queue", tariff: "Rates", docs: "Documents", partners: "Partners", contact: "Contact",
+                hero_h1: "ERKESHTAM – CARGO TO CHINA", hero_p: "Online queue, real-time status, all info in one place", hero_btn: "Join the Queue",
+                live_h2: "CURRENT STATUS (LIVE)", trucks: "Trucks at border", waiting: "Avg. waiting (days)", weather: "Weather (Erkeshtam)",
+                queue_h2: "ONLINE QUEUE REGISTRATION", plate: "Vehicle Plate", cargo: "Cargo Type", tonnage: "Weight (tons)", receiver: "Receiver in China", phone: "Phone (WhatsApp)", rules: "I accept the rules", submit: "Register",
+                tariff_h2: "RATES & CALCULATOR", docs_h2: "REQUIRED DOCUMENTS", partners_h2: "TRUSTED PARTNERS",
+                footer_h5: "Erkeshtam Logistics Center", footer_p: "Contact: +996 999 000 999 (WhatsApp, Telegram)<br>Email: info@erkeshtam.kg",
+                alert: "You have successfully joined the queue!\nYour number: #1247\nEstimated waiting: 6-8 days"
+            },
+            zh: {
+                brand: "额尔克什坦物流", live: "实时状态", queue: "在线排队", tariff: "费用", docs: "文件", partners: "合作伙伴", contact: "联系我们",
+                hero_h1: "额尔克什坦 → 中国货运", hero_p: "在线排队 · 实时情况 · 所有信息一站式", hero_btn: "立即排队",
+                live_h2: "当前情况 (实时)", trucks: "边境排队车辆", waiting: "平均等待（天）", weather: "额尔克什坦天气",
+                queue_h2: "在线排队登记", plate: "车牌号", cargo: "货物类型", tonnage: "重量（吨）", receiver: "中国收货人", phone: "电话（微信/WhatsApp）", rules: "我接受规则", submit: "登记",
+                tariff_h2: "费用与计算器", docs_h2: "所需文件", partners_h2: "可靠合作伙伴",
+                footer_h5: "额尔克什坦物流中心", footer_p: "联系方式: +996 999 000 999 (微信/WhatsApp)<br>Email: info@erkeshtam.kg",
+                alert: "您已成功登记！\n您的排队号：#1247\n预计等待：6-8天"
+            }
+        };
+
+        let lang = 'ky';
+
+        function translate(l) {
+            lang = l;
+            document.querySelectorAll("[data-t]").forEach(el => {
+                const key = el.getAttribute("data-t");
+                if (t[l][key]) el.innerHTML = t[l][key];
+            });
+            document.querySelectorAll('.lang-switch a').forEach(a => {
+                a.classList.toggle('active', a.href.includes(l));
+            });
+        }
+
+        // Тил баскычтары
+        document.querySelectorAll('.lang-switch a').forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                translate(a.href.split('=')[1]);
+            });
+        });
+
+        // Бардык тексттерге data-t атрибуттарын автоматтык түрдө кошобуз (бир жолу иштейт)
+        document.querySelector('.navbar-brand').innerHTML = '<i class="fas fa-truck me-2"></i> <span data-t="brand">Эркештам Логистика</span>';
+        document.querySelectorAll('.nav-link')[0].innerHTML = '<span data-t="live">LIVE Абалы</span>';
+        document.querySelectorAll('.nav-link')[1].innerHTML = '<span data-t="queue">Кезекке катталуу</span>';
+        document.querySelectorAll('.nav-link')[2].innerHTML = '<span data-t="tariff">Тарифтер</span>';
+        document.querySelectorAll('.nav-link')[3].innerHTML = '<span data-t="docs">Документтер</span>';
+        document.querySelectorAll('.nav-link')[4].innerHTML = '<span data-t="partners">Партнерлор</span>';
+        document.querySelectorAll('.nav-link')[5].innerHTML = '<span data-t="contact">Байланыш</span>';
+
+        document.querySelector('.hero h1').innerHTML = '<span data-t="hero_h1">ЭРКЕШТАМ – КЫТАЙ ЖҮК ТАШУУ</span>';
+        document.querySelector('.hero p.lead').innerHTML = '<span data-t="hero_p">Онлайн кезек, учурдагы абал, бардык маалымат бир жерде</span>';
+        document.querySelector('.hero .btn').innerHTML = '<i class="fas fa-plus-circle"></i> <span data-t="hero_btn">Кезекке катталуу</span>';
+
+        document.querySelector('#live h2').innerHTML = '<i class="fas fa-satellite-dish text-primary"></i> <span data-t="live_h2">УЧУРДАГЫ АБАЛ (LIVE)</span>';
+        document.querySelectorAll('#live .status-card p')[0].innerHTML = '<span data-t="trucks">Чек арада турган машиналар</span>';
+        document.querySelectorAll('#live .status-card p')[1].innerHTML = '<span data-t="waiting">Орточо күтүү (күн)</span>';
+        document.querySelectorAll('#live .status-card p')[2].innerHTML = '<span data-t="weather">Аба ырайы (Эркештам)</span>';
+
+        document.querySelector('#queue h2').innerHTML = '<span data-t="queue_h2">ОНЛАЙН КЕЗЕККЕ КАТТАЛУУ</span>';
+        document.querySelectorAll('#queue label')[0].innerHTML = '<span data-t="plate">Машина номери</span> <span class="text-danger">*</span>';
+        document.querySelectorAll('#queue label')[1].innerHTML = '<span data-t="cargo">Жүктүн түрү</span>';
+        document.querySelectorAll('#queue label')[2].innerHTML = '<span data-t="tonnage">Тоннаж (тонна)</span>';
+        document.querySelectorAll('#queue label')[3].innerHTML = '<span data-t="receiver">Кытайдагы алуучу компания</span>';
+        document.querySelectorAll('#queue label')[4].innerHTML = '<span data-t="phone">Телефон (WhatsApp)</span> <span class="text-danger">*</span>';
+        document.querySelector('#queue .form-check-label').innerHTML = '<span data-t="rules">Мен эрежелерди кабыл алам</span>';
+        document.querySelector('#queue button[type="submit"]').innerHTML = '<i class="fas fa-paper-plane"></i> <span data-t="submit">Кезекке катталуу</span>';
+
+        document.querySelector('#tariff h2').innerHTML = '<span data-t="tariff_h2">ТАРИФТЕР ЖАНА КАЛЬКУЛЯТОР</span>';
+        document.querySelector('#docs h2').innerHTML = '<span data-t="docs_h2">КЕРЕКТҮҮ ДОКУМЕНТТЕР</span>';
+        document.querySelector('#partners h2').innerHTML = '<span data-t="partners_h2">ИШЕНИМДҮҮ ПАРТНЕРЛОР</span>';
+        document.querySelector('footer h5').innerHTML = '<span data-t="footer_h5">Эркештам Логистика Борбору</span>';
+        document.querySelector('footer p').innerHTML = '<span data-t="footer_p">Байланыш: +996 999 000 999 (WhatsApp, Telegram)<br>Email: info@erkeshtam.kg</span>';
+
+        // Форма жөнөтүлгөндө
+        document.getElementById('queueForm').addEventListener('submit', e => {
+            e.preventDefault();
+            alert(t[lang].alert);
+        });
+    </script>
+</body>
+
+</html>
